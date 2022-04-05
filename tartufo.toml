@@ -1,0 +1,14 @@
+[tool.tartufo]
+repo-path = "."
+json = false
+cleanup = true
+entropy = true
+exclude-entropy-patterns = []
+exclude-path-patterns = [
+  { reason = 'Pipfile.lock', path-pattern = 'Pipfile\.lock' }
+]
+exclude-signatures = []
+rule-patterns = [
+  { reason = 'Password saved to variable', pattern = '''(?i)\w*(?:pw|pass|password)\s?=\s?(?:'|")(?!\*\*\*REMOVED\*\*\*)([\w~!@#$%^&*();:,.?<>|\/\[\]\+\-\=\\]+)(?:'|")''' },
+  { reason = 'Username saved to variable', pattern = '''(?i)\w*(?:user|username)\s?=\s?(?:'|")(?!\*\*\*REMOVED\*\*\*)([\w]+)(?:'|")''' }
+]
