@@ -1,5 +1,7 @@
 # Checkout Code Kata
 
+This comes from the content from the following udemy course: https://www.udemy.com/course/unit-testing-and-tdd-in-python/
+
 ## Setup & Run Tests
 
 * Install pipenv if you haven't already
